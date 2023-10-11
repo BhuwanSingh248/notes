@@ -20,9 +20,9 @@ app.use(expressLayouts);
 app.set('layout', './layout/main');
 app.set('view engine', 'ejs');
 
-app.get('/', (req, res) => {
-    res.render('index')
-});
+
+// routes 
+app.use('/', require('./server/routes/index'));
 
 app.listen(port, () => {
     console.log(`app running on port ${port}`)
