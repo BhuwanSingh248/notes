@@ -4,6 +4,6 @@ exports.homepage = async (req, res) => {
             title : "home",
             description : "landing page for node js "
         }
-        res.render('index', locals)
+        res.render('index', {locals, layout:'../views/layout/front-page'});
     
 }
